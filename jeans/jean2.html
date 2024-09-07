@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,intial-scale=0">
+        <link rel="stylesheet" href="jeans.css">
+
+    </head>
+    <body>
+        <h1> Best Designs For You</h1>
+        
+        <header class="header"> 
+
+        </header>
+        <main>
+            <section id="s1">
+        <div class="box">
+        <div class="d1"> <img src="Hand Emboridered Eyes Denim.jfif" > Minimalist Stitch  <br> <a href="jean3.html?product=p1"> <button style="width: 100px;height:50px;border-radius: 10px;">$20</button></a> </div> 
+        <div class="d1"> <img src="Pocket Full of Sunshine Digital Embroidery Pattern (7_24).jfif"> Floral Stitch1  <br> <a href="jean3.html?product=p2"> <button data-product="p2" onclick="selectproduct(this)" " style="width:100px;height: 50px;border-radius: 10px;">$20</button> </a></div>
+        <div class="d1"> <img src="Embroidery Stick and Stitch Packs - Blooms.jfif"> Floral Stitch2  <br> <a href="jean3.html?product=p3"><button data-product="p2" onclick="selectproduct(this)" style="width: 100px;height: 50px;border-radius: 10px;">$20</button> </a> </div> 
+        <div class="d1"> <img src="e86c9ed9-1bb9-4b68-891a-accd1efe4549.jfif"> Floral Stitch3  <br><a href="jean3.html?product=p4">  <button data-product="p3" onclick="selectproduct(this)" style="width: 100px;height: 50px;border-radius: 10px;">$20</button> </a></div>    
+    </div>
+</section>
+<section id="s2">
+    <div class="box1">
+        <div class="d2"> <img src="DIY embroidery.jfif"> Artattack Stitch1 <br> <a href="jean3.html?product=p5"> <button data-product="p4" onclick="selectproduct(this)" style="width:100px;height:50px;border-radius:  10px;">$20</button> </a> </div>
+        <div class="d2"> <img src="Tomatoes.jfif">Artattack Stitch2  <br> <a href="jean3.html?product=p6">  <button data-product="p5" onclick="selectproduct(this)" style="width: 100px;height:50px;border-radius: 10px;">$20</button> </a></div> 
+    </div>
+</section>
+<section id="s3">
+
+<div class="scro"></div>
+</section>
+</main>
+<script>
+function selectproduct(button){
+    const product = button.getAttribute('data-product');
+    window.location.href='jean3.html?product=${product}';
+}
+
+
+
+
+
+</script>
+    </body>
+</html>

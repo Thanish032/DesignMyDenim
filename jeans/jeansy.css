@@ -1,0 +1,13 @@
+html{
+    background-color: rgb(174, 174, 223);
+}
+.con
+{
+    background-color: aliceblue;
+    width: 600px;
+    height: 700px;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 450px;
+    
+}

@@ -1,0 +1,84 @@
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,intial-scale=0">
+    <link rel="stylesheet" href="jeansy.css">
+</head>
+<body>
+<div class="con">
+    <div id="pd"></div> 
+    <br> <br>
+    <div class="sub">
+    <label for="cd" style="margin-left: 20px;font-weight: bolder;">Collection Date</label>
+    <input type="date" id="cd" required>
+    <label for="dd" style="margin-left:10px;font-weight: bolder;">Expected Delivery Date</label>
+    <input type="text" id="dd" readonly><br> <br>
+    <button style="background-color: green;color: aliceblue;padding: 10px 20px;border: none;border-radius: 10px;cursor: pointer;text-align: center;margin-left: 250px;" onclick="showAlert()">CONFIRM</button>
+<script>
+document.getElementById('cd').addEventListener('change',function(){
+    const collectiondate = new Date(this.value);
+    collectiondate.setDate(collectiondate.getDate()+4);
+    const deldate = collectiondate.toISOString().split('T')[0];
+    document.getElementById('dd').value = deldate;
+});
+function showAlert(){
+    const collectiondate=document.getElementById('cd').value;
+    const deldate=document.getElementById('dd').value;
+    if(collectiondate){
+        alert(`THE DESIGN HAS BEEN SELECTED \n CollectionDate: ${collectiondate}\n DeliveryDate:${deldate}`);
+    }
+    else{
+        alert(`Please select a collection date first!`)
+    }
+}
+</script>
+</div>
+    <script>
+ window.onload=function(){
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get('product');
+    const prodisplay = document.getElementById('pd');
+    if(product==='p1'){
+        prodisplay.innerHTML="<img src='Hand Emboridered Eyes Denim.jfif' alt='p1' style='width:300px;height:300px;margin-left:150px;border-radius:10px'> <h1 style='text-align:center'>MIMALIST EYE PRINT STITCH</h1><br><p style='text-align:center;margin-bottom:150px'>Design-1 showcases an intricate eye print stitch,adding a mysterious and artistic touch to your Denim.The hand-made detail makes each piece unique,perfect for those who appreciate the art of subtle symbolism.</p>"
+    }
+    else if(product ==='p2'){
+        prodisplay.innerHTML="<img src='Pocket Full of Sunshine Digital Embroidery Pattern (7_24).jfif' alt='p2' style='width:300px;height:300px;margin-left:150px;border-radius:10px'> <h1 style='text-align:center'>FLORAL STITCH-1</h1> <p style='text-align:center'>Design-2 features an elegent floral stitch,blending nature's beauty with timeless fashion.The delicate hand-made stitches bring a soft and feminine charm to your denim,ideal for adding a touch of nature to your wardrobe."}
+     else if(product==='p3'){
+        prodisplay.innerHTML="<img src='Embroidery Stick and Stitch Packs - Blooms.jfif' alt='p3' style='width:300px;height:300px;margin-left:150px;border-radius:10px'> <h1 style='text-align:center'>LILIES PRINT STITCH </h1> <p style:'text-align:center'> Design-3 presents a graceful liles printstitch,symbolizing purity and refined elegance.Each stitch is meticulously crafted by hand,making this denim a standout piece for anyone who values sophisticated,nature-inspired design.</p>";}
+    else if(product==='p4'){
+        prodisplay.innerHTML="<img src='e86c9ed9-1bb9-4b68-891a-accd1efe4549.jfif' alt='p4' style='width:300px;height:300px;margin-left:150px;border-radius:10px'> <h1 style='text-align:center'>SUNFLOWER STITCH</h1> <p style='text-align:center'>Design-4 is adorned with a vibrant sunflower stitch,radiating warmth and positivity.The hand-made craftsmanship ensures that each sunflower bursts with life,turning your denim into a joyful statement piece.</p>"}
+        
+    else if(product==='p5'){
+        prodisplay.innerHTML="<img src='DIY embroidery.jfif' alt='p5' style='width:300px;height:300px;margin-left:150px;border-radius:10px'> <h1 style='text-align:center'> SUN PRINT STITCH </h1> <p style='text-align:center'>Design-5 brings the energy of the sun to your denim with a striking sun print stitch.Hand-made with care,this design is perfect for those who want to carry a bit of sunshine with them whereverr they go."}
+    
+    else if(product==='p6'){
+        prodisplay.innerHTML="<img src='Tomatoes.jfif' alt='p6' style='width:300px;height:300px;margin-left:150px ;border-radius:10px'> <h1 style='text-align:center'>TOMATOES STITCH</h1> <p style='text-align:center'>Design-6 features a playful tomatoes stitch combining aquirky,hand-made design with classic denim.This unique pattern is perfect for those who love to make a bold,fun statement with their fashion choices. </p>"}
+    
+    };
+    
+    
+ 
+
+
+
+
+
+
+
+    </script>
+
+
+
+</div>
+
+
+
+
+
+</body>
+
+
+
+
+</html>
